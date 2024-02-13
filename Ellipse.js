@@ -19,6 +19,6 @@ ellipseButton.addEventListener('click', function ellipseAreaMath() {
     const ellipseWidthCalculat = ellipseAreacalculet('ellipse-width');
     const ellipseHeightCalculat = ellipseAreacalculet('ellipse-hight');
     const ellipseCalculete = 3.1416 * ellipseHeightCalculat * ellipseWidthCalculat;
-    ellipseDisplay.innerText = ellipseCalculete;
+    ellipseDisplay.innerText = ellipseCalculete.toFixed(3);
     result.innerText = ellipseCalculete;
 })
