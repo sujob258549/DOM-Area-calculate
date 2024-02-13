@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- daisy ui and tailwind css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+   
+    <div class="container mx-auto max-w-[90%] py-10  md:py-32">
+
+        <h1 class="font-bold text-5xl text-center  mb-20" style="text-shadow: 1px 1px 10px;"> Area Calculator</h1>
+
+
+        <div class="flex flex-col-reverse md:flex-row gap-5">
+            <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%]  md:w-[75%]  ">
+                <div class="card card-compact shadow-xl p-4">
+                    <img src="./images/Polygon 1.png" class=" h-[80%]" alt="" >
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-bold pt-10">Triangle!</h2>
+                      <p class="">  Area(A) = 0.5 X b X h</p>
+                      <h4  class="text-xl text-green-800"> Triangle (A) = <span id="triangle-display">0</span>cm <sup>2</sup> </h4>
+                      <div class="flex gap-3 items-center pt-5">
+                        <input id="triangle-height"  type="text" class="bg-slate-200 w-full py-2 border border-sky-950 pl-3" placeholder="b">
+                        <h3>cm</h3>
+                        <input id="triangle-base"  type="text" class="bg-slate-200 py-2 border w-full border-sky-950 pl-3" placeholder=" h">
+                        <h3>cm</h3>
+                        
+                      </div>
+                      <div class="card-actions justify-end my-10">
+                        <button id="triangle-button" class="btn w-full text-xl font-bold bg-[#1090D8] text-white hover:bg-[#108fd8b2]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-compact shadow-xl p-4">
+                   <img src="./images/rectangle.png" alt="" class="h-full">
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-bold pt-10">Rectangle!</h2>
+                      <p class="">  Area(A) =  w X l</p>
+                      <h4 class="text-xl text-green-800"> Rectangle(A) =<span id="rectangle-display">0</span>cm <sup>2</sup></h4>
+                      <div class="flex gap-3 items-center pt-5">
+                        <input type="text" class="bg-slate-200 w-full py-2 border border-sky-950 pl-3" id="rectangle-base" placeholder="b">
+                        <h3>cm</h3>
+                        <input type="text" class="bg-slate-200 py-2 border w-full border-sky-950 pl-3" id="rectangle-height"  placeholder=" h">
+                        <h3>cm</h3>
+                        
+                      </div>
+                      <div class="card-actions justify-end my-10">
+                        <button id="rectangle-button" class="btn w-full text-xl font-bold bg-[#1090D8] text-white hover:bg-[#108fd8b2]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-compact shadow-xl p-4">
+                   <img src="./images/parallelogram.png" class="h-full" alt="">
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-bold pt-10">Parallelogram!</h2>
+                      <p class="">  Area(A) = 0.5 X b X h</p>
+                      <h4 class="text-xl text-green-800"> Parallo(A) = <span id="parallelogram-display">0</span>cm <sup>2</sup> </h4>
+                      <div class="flex gap-3 items-center pt-5">
+                        <input type="text" class="bg-slate-200 w-full py-2 border border-sky-950 pl-3" id="parallelogram-width" placeholder="w">
+                        <h3>cm</h3>
+                        <input type="text" class="bg-slate-200 py-2 border w-full border-sky-950 pl-3" id="parallelogram-height"  placeholder=" I">
+                        <h3>cm</h3>
+                        
+                      </div>
+                      <div class="card-actions justify-end my-10">
+                        <button id="parallelogram-bitton" class="btn w-full text-xl font-bold bg-[#1090D8] text-white hover:bg-[#108fd8b2]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-compact shadow-xl p-4">
+                   <img src="./images/rhombus.png" alt="" class="h-full">
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-bold pt-10">Rhombus!</h2>
+                      <p class="">  Area(A) = 0.5 X b<sub>1</sub> X b<sub>2</sub></p>
+                      <h4 class="text-xl text-green-800"> Rhombus(A) = <span id="rhombus-Display">0</span>cm <sup>2</sup> </h4>
+                      <div class="flex gap-3 items-center pt-5">
+                        <input type="text" class="bg-slate-200 w-full py-2 border border-sky-950 pl-3" id="rhombus-base1" placeholder="b">
+                        <h3>cm</h3>
+                        <input type="text" class="bg-slate-200 py-2 border w-full border-sky-950 pl-3" id="rhombus-base2"  placeholder=" h">
+                        <h3>cm</h3>
+                        
+                      </div>
+                      <div class="card-actions justify-end my-10">
+                        <button id="rhombus-buttons" class="btn w-full text-xl font-bold bg-[#1090D8] text-white hover:bg-[#108fd8b2]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-compact shadow-xl p-4">
+                   <img src="./images/pentagon.png" class="h-full" alt="">
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-bold pt-10">Pentagon!</h2>
+                      <p class="">  Area(A) = 0.5 X P X b</p>
+                      <h4 class="text-xl text-green-800"> Pentagon (A) = <span id="pentagon-display">0</span>cm <sup>2</sup> </h4>
+                      <div class="flex gap-3 items-center pt-5">
+                        <input type="text" class="bg-slate-200 w-full py-2 border border-sky-950 pl-3" id="pentagon-height" placeholder="b">
+                        <h3>cm</h3>
+                        <input  type="text" class="bg-slate-200 py-2 border w-full border-sky-950 pl-3" id="pentagon-base"  placeholder=" h">
+                        <h3>cm</h3>
+                        
+                      </div>
+                      <div class="card-actions justify-end my-10">
+                        <button id="pentagon-button" class="btn w-full text-xl font-bold bg-[#1090D8] text-white hover:bg-[#108fd8b2]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-compact shadow-xl p-4">
+                   <img src="./images/ellipse.png" alt="" class="h-full">
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-bold pt-10">Ellipse!</h2>
+                      <p class="">  Area(A) = r*ab</p>
+                      <h4 class="text-xl text-green-800"> Ellipse (A) = <span id="ellipse-display">0</span>cm <sup>2</sup> </h4>
+                      <div class="flex gap-3 items-center pt-5">
+                        <input type="text" class="bg-slate-200 w-full py-2 border border-sky-950 pl-3" id="ellipse-width" placeholder="b">
+                        <h3>cm</h3>
+                        <input type="text" class="bg-slate-200 py-2 border w-full border-sky-950 pl-3" id="ellipse-hight"  placeholder=" h">
+                        <h3>cm</h3>
+                        
+                      </div>
+                      <div class="card-actions justify-end my-10">
+                        <button id="ellipse-button" class="btn w-full text-xl font-bold bg-[#1090D8] text-white hover:bg-[#108fd8b2]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="w-full  md:w-[25%] border border-gray-700 h-[200px] rounded-[5px] md:h-[400px]">
+                <h3 class="font-bold text-xl text-center underline pt-10"> Area Calculation</h3>
+                <h3 class="font-bold text-xl text-center  pt-10">Your Result <br><span class="text-4xl" id="result">0</span></h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<script src="triangle.js"></script>
+<script src="Rectangle.js"></script>
+<script src="parallelogram.js"></script>
+<script src="rombose.js"></script>
+<script src="pentagon.js"></script>
+<script src="Ellipse.js"></script>
+
+
+
+</body>
+
+</html>
